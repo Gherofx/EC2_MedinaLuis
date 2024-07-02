@@ -21,7 +21,7 @@ fun formulario(navController: NavController){
        Button(onClick = {
            navController.navigate("inicio")
        }) {
-           Text(text = "Guardar")
+           Text(text = "Resolver")
 
        }
     }
