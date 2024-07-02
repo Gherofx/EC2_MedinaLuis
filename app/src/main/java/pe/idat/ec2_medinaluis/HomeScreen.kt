@@ -15,11 +15,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 
 
-@Preview(showBackground = true)
+
 @Composable
-fun inicio(){
+fun inicio(navController: NavController){
     Column (
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -29,16 +30,22 @@ fun inicio(){
             contentDescription = "Logo")
 
         Spacer(modifier = Modifier.height(5.dp))
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = {
+            navController.navigate("registro")
+        }) {
             Text(text = "REGISTRO")
             
         }
         Spacer(modifier = Modifier.height(5.dp))
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = {
+            navController.navigate("formulario")
+        }) {
             Text(text = "FORMULARIO")
         }
         Spacer(modifier = Modifier.height(5.dp))
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = {
+            navController.navigate("listado")
+        }) {
             Text(text = "LISTADO")
         }
     }

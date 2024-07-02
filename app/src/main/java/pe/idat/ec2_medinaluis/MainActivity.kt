@@ -11,6 +11,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+
+
+import androidx.navigation.compose.rememberNavController
 import pe.idat.ec2_medinaluis.ui.theme.EC2_MedinaLuisTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,7 +24,24 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             EC2_MedinaLuisTheme {
-                inicio()
+                val navController = rememberNavController()
+                NavHost(navController = navController, startDestination = "inicio",
+                    builder = {
+                        composable("inicio"){
+                            inicio(navController)
+                        }
+                        composable("registro"){
+                            registro(navController)
+                        }
+                        composable("formulario"){
+                            formulario(navController)
+                        }
+                        composable("listado") {
+                            listado(navController)
+                        }
+
+                    })
+
 
             }
         }
