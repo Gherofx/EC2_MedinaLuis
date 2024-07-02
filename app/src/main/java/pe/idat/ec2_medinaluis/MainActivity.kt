@@ -19,6 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             EC2_MedinaLuisTheme {
+                inicio()
 
             }
         }
