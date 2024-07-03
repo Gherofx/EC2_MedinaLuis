@@ -168,25 +168,22 @@ fun RadioButtonGroup(selected: Boolean, onSelectedChange: (Boolean) -> Unit) {
 
 @Composable
 fun RadioButtonGroup2(selected: Boolean, onSelectedChange: (Boolean) -> Unit) {
-    Row {
+    Row (){
         RadioButton(
             selected = !selected,
-            onClick = { onSelectedChange(true) },
-            modifier = Modifier.padding(end = 8.dp)
+            onClick = { onSelectedChange(false) }
         )
         Text("Mucho")
 
         RadioButton(
             selected = selected,
-            onClick = { onSelectedChange(false) },
-            modifier = Modifier.padding(start = 16.dp)
+            onClick = { onSelectedChange(true) }
         )
         Text("Mas o menos")
 
         RadioButton(
             selected = selected,
-            onClick = { onSelectedChange(true) },
-            modifier = Modifier.padding(start = 16.dp)
+            onClick = { onSelectedChange(true) }
         )
         Text("Poco")
     }
@@ -198,22 +195,19 @@ fun RadioButtonGroup3(selected: Boolean, onSelectedChange: (Boolean) -> Unit) {
     Row {
         RadioButton(
             selected = !selected,
-            onClick = { onSelectedChange(true) },
-            modifier = Modifier.padding(end = 8.dp)
+            onClick = { onSelectedChange(true) }
         )
         Text("Bien")
 
         RadioButton(
             selected = selected,
-            onClick = { onSelectedChange(false) },
-            modifier = Modifier.padding(start = 16.dp)
+            onClick = { onSelectedChange(false) }
         )
         Text("Regular")
 
         RadioButton(
             selected = selected,
-            onClick = { onSelectedChange(true) },
-            modifier = Modifier.padding(start = 16.dp)
+            onClick = { onSelectedChange(true) }
         )
         Text("Mal")
     }
